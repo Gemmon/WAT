@@ -1,15 +1,3 @@
-funkcja mnożenia macierzy , 
-bias - suma dwóch wektorów
-v1 = w11x1+w21x2+k1
-v1= fact(v1)
-3 różne macierze dla różnych wag
-L: R^2 -> R
-zliacznianie dla funkcji
-mapowanie funkcji
-
-v=x(W+k)
-v=
-
 
 tablica struktur - lista użytkowników , każdy użytkownik miał około 10 informacji,
 mają mieć tablice, witch case do menu, funkcja "dodaj" "wyświetl wszystkich" "usuń"
