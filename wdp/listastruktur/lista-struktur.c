@@ -7,7 +7,7 @@ char name[20];
 int numb;
 int choice,numbUsers,size;
 
-
+//test
 
 struct user{
     int numb;
