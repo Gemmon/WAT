@@ -1,126 +1,166 @@
-#include <iostream>
-#include <fstream>
-using namespace std;
+//============================================================================
+// Zadanie 2_2  jezyk C++
+//  Wizytownik
+//  WCY22IY1S1  Chrapowicz Krzysztof
+//============================================================================
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_DLUGOSC 20
 
 struct wizytowka {
-    int ID;
-    char name;
-    wizytowka* prev;
-    wizytowka* next;
+    char nazwisko[MAX_DLUGOSC + 1];
+    char imie[MAX_DLUGOSC + 1];
+    int numer;
+    struct wizytowka* prev;
+    struct wizytowka* next;
 };
 
 struct lista {
-    wizytowka head;
-    wizytowka* tail;
+    struct wizytowka head;
+    struct wizytowka* tail;
 };
 
-wizytowka* stworzWizytowke(int ID, const char& name) {
-    wizytowka* newskladnik = new wizytowka;
-    newskladnik->ID = ID;
-    newskladnik->name = name;
+struct wizytowka* stworzWizytowke(const char* nazwisko, const char* imie, int numer) {
+    struct wizytowka* newskladnik = (struct wizytowka*)malloc(sizeof(struct wizytowka));
+    strncpy(newskladnik->nazwisko, nazwisko, MAX_DLUGOSC);
+    strncpy(newskladnik->imie, imie, MAX_DLUGOSC);
+    newskladnik->numer = numer;
+    newskladnik->nazwisko[MAX_DLUGOSC] = '\0'; // Ensure null-termination
+    newskladnik->imie[MAX_DLUGOSC] = '\0'; // Ensure null-termination
     newskladnik->prev = NULL;
     newskladnik->next = NULL;
     return newskladnik;
 }
 
-void swtorzListe(lista* list) {
+int jestPusta(struct lista* list) {
+    return list->head.next == NULL;
+}
+
+void dodajKoniec(struct lista* list, const char* nazwisko, const char* imie, int numer) {
+    struct wizytowka* newskladnik = stworzWizytowke(nazwisko, imie, numer);
+
+    if (jestPusta(list)) {
+        list->head.next = newskladnik;
+        newskladnik->prev = &list->head;
+        list->tail = newskladnik;
+    } else {
+        struct wizytowka* current = list->tail;
+        while (current != NULL) {
+            if (strcmp(nazwisko, current->nazwisko) >= 0) {
+                newskladnik->prev = current;
+                newskladnik->next = current->next;
+                if (current->next != NULL) {
+                    current->next->prev = newskladnik;
+                }
+                current->next = newskladnik;
+
+                if (current == list->tail) {
+                    list->tail = newskladnik;
+                }
+
+                return;
+            }
+            current = current->prev;
+        }
+
+        // If the loop finishes, it means the new contact should be at the beginning of the list
+        newskladnik->next = list->head.next;
+        list->head.next->prev = newskladnik;
+        list->head.next = newskladnik;
+        newskladnik->prev = &list->head;
+    }
+}
+
+void szukajWizytowke(struct lista* list, const char* nazwisko) {
+    struct wizytowka* current = list->head.next;
+    int z = 1;
+    while (current != NULL) {
+        if (strcmp(current->nazwisko, nazwisko) == 0) {
+            printf("Nazwisko: %s Imie: %s, Numer: %d\n", current->nazwisko, current->imie, current->numer);
+            z = 0;
+            break;
+        } else {
+            current = current->next;
+        }
+    }
+    if (z) {
+        printf("Wizytowka o podanym nazwisku nie zostala znaleziona.\n");
+    }
+}
+
+void swtorzListe(struct lista* list) {
     list->head.next = NULL;
     list->head.prev = NULL;
     list->tail = NULL;
 }
 
-bool jestPusta(lista* list) {
-    return list->head.next == NULL;
-}
 
-void dodajKoniec(lista* list, int ID, const char& name) {
-    wizytowka* newskladnik = stworzWizytowke(ID, name);
+void wyswietlListe(struct lista* list) {
     if (jestPusta(list)) {
-        list->head.next = newskladnik;
-        newskladnik->prev = &list->head;
-        list->tail = newskladnik;
-    }
-    else {
-        newskladnik->prev = list->tail;
-        list->tail->next = newskladnik;
-        list->tail = newskladnik;
-    }
-}
-
-int usunPoczatek(lista* list) {
-    if (jestPusta(list)) {
-        cout << "Lista jest pusta." << endl;
-        return -1;
-    }
-    else {
-        wizytowka* temp = list->head.next;
-        int ID = temp->ID;
-        char name = temp->name;
-
-        list->head.next = temp->next;
-        if (list->head.next != NULL)
-            list->head.next->prev = &list->head;
-        else
-            list->tail = NULL;
-        delete temp;
-        return ID;
-    }
-}
-
-void wyswietlListe(lista* list) {
-    if (jestPusta(list)) {
-        cout << "Lista jest pusta." << endl;
-    }
-    else {
-        wizytowka* current = list->head.next;
-        cout << "Lista: " << endl;
-        int numer = 1;
-        while (current != NULL) {
-            cout << numer << ". Nr " << current->ID << " Imie: " << current->name << endl;
-            current = current->next;
-            numer++;
-        }
-        cout << endl;
-    }
-}
-
-void wyswietlListeOdKonca(lista* list) {
-    if (jestPusta(list)) {
-        cout << "Lista jest pusta." << endl;
-    }
-    else {
-        wizytowka* current = list->tail;
-        cout << "Lista (od konca): " << endl;
-        int numer = 1;
-        while (current != NULL) {
-            cout << numer << ". Nr " << current->ID << " Imie: " << current->name << endl;
-            current = current->prev;
-            numer++;
-        }
-        cout << endl;
-    }
-}
-
-
-void szukajWizytowke(lista* list, int ID){
-    wizytowka* current = list->head.next;
-    int z = 1;
-    while(z)
-    if( current->ID = ID){
-        cout << "ID: " << current->ID << " Imie: " << current->name << endl;
-        z = 0;
+        printf("Lista jest pusta.\n");
     } else {
-       current = current->next;
+        struct wizytowka* current = list->head.next;
+        printf("Lista:\n");
+        int iteracja = 1;
+        while (current != NULL) {
+            printf("%d. Nazwisko: %s Imie: %s Numer: %d\n", iteracja, current->nazwisko, current->imie, current->numer);
+            current = current->next;
+            iteracja++;
+        }
+        printf("\n");
     }
-
 }
 
-void freeListe(lista* list) {
-    wizytowka* current = list->head.next;
-    wizytowka* next;
+void wyswietlListeOdKonca(struct lista* list) {
+    if (jestPusta(list)) {
+        printf("Lista jest pusta.\n");
+    } else {
+        struct wizytowka* current = list->tail;
+        printf("Lista (od konca):\n");
+        int iteracja = 1;
+        while (current != NULL) {
+            printf("%d. Nazwisko: %c Imie: %c Numer: %d\n", iteracja, current->nazwisko, current->imie, current->numer);
+            current = current->prev;
+            iteracja++;
+        }
+        printf("\n");
+    }
+}
+
+void usunWizytowke(struct lista* list, const char* nazwisko) {
+    struct wizytowka* current = list->head.next;
+    while (current != NULL) {
+        if (strcmp(current->nazwisko, nazwisko) == 0) {
+            // Found the contact, remove it
+            if (current->prev != NULL) {
+                current->prev->next = current->next;
+            }
+            if (current->next != NULL) {
+                current->next->prev = current->prev;
+            }
+            if (current == list->tail) {
+                list->tail = current->prev;
+            }
+            free(current);
+            printf("Wizytowka o nazwisku %s zostala usunieta.\n", nazwisko);
+            return;
+        } else {
+            current = current->next;
+        }
+    }
+    printf("Wizytowka o podanym nazwisku nie zostala znaleziona.\n");
+}
+
+void freeListe(struct lista* list) {
+    struct wizytowka* current = list->head.next;
+    struct wizytowka* next;
     while (current != NULL) {
         next = current->next;
-        delete current;
+        free(current);
         current = next;
     }
     list->head.next = NULL;
@@ -128,80 +168,77 @@ void freeListe(lista* list) {
 }
 
 
-void zapiszListe(lista* list, const char& filename) {
-   FILE* file = fopen(filename, "w");
-    if (!file) {
-        cout << "Blad pliku." << endl;
+void zapiszListe(struct lista* list, const char* filename) {
+    FILE* file = fopen(filename, "w");
+    if (file == NULL) {
+        perror("Nie udalo sie otworzyc pliku do zapisu");
         return;
     }
 
-    wizytowka* current = list->head.next;
+    struct wizytowka* current = list->head.next;
     while (current != NULL) {
-        file << "ID: " << current->ID << " Imie: " << current->name << endl;
+        fprintf(file, "%c %c %d\n", current->nazwisko, current->imie, current->numer);
         current = current->next;
     }
-    fclose(();
+
+    fclose(file);
 }
 
 int main() {
-    lista list;
+    struct lista list;
     swtorzListe(&list);
 
-    int choice = 0;
-    int ID = 0;
-    char name;
-    while (true) {
-        cout << "\n1. Dodaj wizytowke(d)\n2. Szukaj wizytowki(s)\n3. Wypisz wizytowki(w)\n4. Wypisz wizytowki od konca(v)\n5. Usun wizytowke(u)\n6. Zapisz rekordy w pliku(z)\n7. Zakoncz program(Ctrl-Z)\n";
-        cout << "Wybierz polecenie: ";
-        cin >> choice;
+    char nazwisko[MAX_DLUGOSC];
+    char imie[MAX_DLUGOSC];
+    int numer;
+    while (1) {
+        char choice = 'a';
+        printf("\n1. Dodaj wizytowke(d)\n2. Szukaj wizytowki(s)\n3. Wypisz wizytowki(w)\n4. Wypisz wizytowki od konca(v)\n5. Usun wizytowke(u)\n6. Zapisz liste(z)\n7. Zakoncz program(e)\n");
+        printf("Wybierz polecenie: ");
+        scanf(" %c", &choice);
 
         switch (choice) {
-        case 1:
-            cout << "Podaj ID: ";
-            cin >> ID;
-            cout << "Podaj imie: ";
-            cin >> name;
-            dodajKoniec(&list, ID, name);
-            cout << "Zostala dodana." << endl;
+        case 'd':
+            printf("Podaj nazwisko: ");
+            scanf(" %20s", nazwisko);
+            printf("Podaj imie: ");
+            scanf(" %20s", imie);
+            printf("Podaj numer telefonu: ");
+            scanf(" %d", &numer);
+            dodajKoniec(&list, nazwisko, imie, numer);
+            printf("Zostala dodana.\n");
             break;
-        case 2:
-           cout<< "Podaj numer wizytowki: "<<endl;
-           cin >> ID;
-           szukajWizytowke(&list, ID);
-
-
-        break;
-        case 3:
+        case 's':
+            printf("Podaj nazwisko wizytowki: ");
+            scanf(" %20s", nazwisko);
+            szukajWizytowke(&list, nazwisko);
+            break;
+        case 'w':
             wyswietlListe(&list);
             break;
-        case 4:
+        case 'v':
             wyswietlListeOdKonca(&list);
             break;
-        case 5:
-            if (!jestPusta(&list)) {
-                int removedElement = usunPoczatek(&list);
-                cout << "Zostal usuniety: " << removedElement << endl;
-            }
-            else {
-                cout << "Lista jest pusta." << endl;
-            }
+        case 'u':
+            printf("Podaj nazwisko wizytowki do usuniecia: ");
+            scanf("%20s", nazwisko);
+            usunWizytowke(&list, nazwisko);
             break;
-        case 6: {
-            char filename;
-            cout << "Nazwa pliku: ";
-            cin >> filename;
-            zapiszListe(&list, filename);
-            cout << "Zapisano liste do pliku." << endl;
-            break;
-        }
-        case 7:
+        case 'z':
+            zapiszListe(&list, "lista");
+            printf("Zapisano listy \n");
+            return 0;
+        case 'e':
             freeListe(&list);
-            cout << "Zakonczenie programu" << endl;
+            printf("Zakonczenie programu\n");
             return 0;
         default:
-            cout << "Wybierz ponownie." << endl;
+            printf("Wybierz ponownie.\n");
         }
+        while (getchar() != '\n');
     }
 
+    return 0;
+}
     return 0;
 }
