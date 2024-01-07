@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7A5B8D89-38B2-D96F-8C26-79276C2274B3" name="BD4 KLIENT">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:09:41 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr klienta" id="F67D28DC-83A9-3494-C29C-E4451844BF55">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:10:28 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="klient nazwisko" id="3BFCF20E-3423-62AC-2CB9-FE638DBB972E">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:10:40 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="klient imie" id="401208D4-9B18-53D4-35A7-E3585FEA706D">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:11:04 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="klient adres" id="75718745-2A24-F58E-59B1-333E2AF8967F">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:11:12 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="klient miasto" id="F907AD6D-1609-BEC6-E9F0-42C231F53281">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:11:21 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="klient kod adresowy" id="22AB2712-8696-26B2-9648-0DB898C8E485">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:11:33 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2243469A-E4CA-BF3F-B130-B7B7421FA3DD" name="BD4_KLIENT_PK">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:10:15 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F67D28DC-83A9-3494-C29C-E4451844BF55</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

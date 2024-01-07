@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E5CB0A29-59D1-5AD7-EFFA-127CEEDFCFEF" name="BD4_KLIENT">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>7A5B8D89-38B2-D96F-8C26-79276C2274B3</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_klienta" id="29B67774-2DEA-D357-0EC7-55C7787A5F4B">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>F67D28DC-83A9-3494-C29C-E4451844BF55</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="klient_nazwisko" id="697E168D-60A0-C253-05CB-89C44537DE3F">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>3BFCF20E-3423-62AC-2CB9-FE638DBB972E</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="klient_imie" id="74284A01-8A06-DF00-E013-0A90647A3E9F">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>401208D4-9B18-53D4-35A7-E3585FEA706D</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="klient_adres" id="7F5D6760-F413-3BD4-DC85-FB9DBE164D58">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>75718745-2A24-F58E-59B1-333E2AF8967F</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="klient_miasto" id="0DB2E316-5A91-BDBA-1F2C-410468D38CB5">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>F907AD6D-1609-BEC6-E9F0-42C231F53281</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="klient_kod_adresowy" id="DA900BCF-4DE4-7935-129F-E8DEB9E98B0C">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>22AB2712-8696-26B2-9648-0DB898C8E485</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D2BA949C-A8B4-5270-7E2E-3399EE040581" name="BD4_KLIENT_PK">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>2243469A-E4CA-BF3F-B130-B7B7421FA3DD</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="29B67774-2DEA-D357-0EC7-55C7787A5F4B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

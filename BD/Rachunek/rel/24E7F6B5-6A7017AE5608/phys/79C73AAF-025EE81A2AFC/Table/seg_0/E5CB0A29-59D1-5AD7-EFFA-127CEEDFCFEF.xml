@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="BD4_KLIENT" directorySegmentName="seg_0" id="E5CB0A29-59D1-5AD7-EFFA-127CEEDFCFEF">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="klient_miasto" id="0DB2E316-5A91-BDBA-1F2C-410468D38CB5">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nr_klienta" id="29B67774-2DEA-D357-0EC7-55C7787A5F4B">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="klient_nazwisko" id="697E168D-60A0-C253-05CB-89C44537DE3F">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="klient_imie" id="74284A01-8A06-DF00-E013-0A90647A3E9F">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="klient_adres" id="7F5D6760-F413-3BD4-DC85-FB9DBE164D58">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="klient_kod_adresowy" id="DA900BCF-4DE4-7935-129F-E8DEB9E98B0C">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="BD4_KLIENT_PK" id="D2BA949C-A8B4-5270-7E2E-3399EE040581">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

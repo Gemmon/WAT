@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="BD4_RACHUNEK" directorySegmentName="seg_0" id="FC90D893-9A99-AEDD-60EE-B4EA04044048">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="wartosc" id="21D935E1-44B3-91A3-CE3D-0081E99E8B7B">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nr_rachunku" id="28212AB5-2DA2-49D5-DFCF-4A69F76513B6">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nr_produktu" id="40DA20C3-5294-6B5C-CAD8-B372F5F5C791">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nr_klienta" id="87AB3DF4-2362-DECD-4CCF-BB4A092EED02">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="data_sprzedazy" id="9F6914EE-F4EB-9C3D-5981-68556AD8C830">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nr_klienta1" id="BBBD3C2F-28C8-C0F7-0395-7EF49A1391A0">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ilosc_produktu" id="C08EC369-4475-76ED-F507-A74273D269C4">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="cena_zakupu" id="D6A7421B-2B2C-84B6-74DD-8B1C33208C69">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="BD4_KLIENT_FK" id="00331318-38E2-E9DB-3E01-1DBBEB3F831E">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="BD4_PRODUKTv1_FK" id="F435EF53-59BE-21FC-F242-04F03E439CF1">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="BD4_RACHUNEK_PK" id="A4005272-E454-FE92-5605-D0C9B7F2DBB6">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

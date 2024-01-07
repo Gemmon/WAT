@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="BD4 RACHUNEK BD4 KLIENT FK" directorySegmentName="seg_0" id="F8B9E188-79BB-5CF2-3664-8CCD76CAF0CA">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:15:54 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<sourcePk>2243469A-E4CA-BF3F-B130-B7B7421FA3DD</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7A5B8D89-38B2-D96F-8C26-79276C2274B3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BAB344E1-8CF6-FD95-B4FF-5870EEF05EF0</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

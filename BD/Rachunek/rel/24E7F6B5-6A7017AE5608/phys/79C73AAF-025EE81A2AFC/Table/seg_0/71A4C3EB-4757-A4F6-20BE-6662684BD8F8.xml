@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="BD4_PRODUKTv1" directorySegmentName="seg_0" id="71A4C3EB-4757-A4F6-20BE-6662684BD8F8">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nr_produktu" id="4358781D-8435-84E3-4F72-4851B8F2B5D6">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ranking" id="56DBCA9A-8E6F-5F47-3F36-901F78A2F079">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="cena_produktu" id="607D583E-3437-982C-835A-F652D810A172">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="rok_produkcji" id="BA1D8A45-4117-A2D2-882A-0E936BC075F9">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nazwa_produktu" id="D6A10CA2-CE13-33BE-1738-9F6D2DDFF90A">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="BD4_PRODUKTv1_PK" id="9C263DAA-D3FD-E0DB-EA30-E8B59080FC56">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:23:55 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

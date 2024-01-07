@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BAB344E1-8CF6-FD95-B4FF-5870EEF05EF0" name="BD4 RACHUNEK">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:11:53 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nr rachunku" id="03F2BBF7-357A-6C4D-0C1C-96AA793C040A">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:12:01 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data sprzedazy" id="9783A558-C33E-931F-5C02-3554A83A5FB6">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:12:18 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ilosc produktu" id="7AB84E89-13E9-04D3-BD02-42CE35B5CC75">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:12:36 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cena zakupu" id="B2664C47-A61A-1C2C-5979-A64F33E18688">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:12:44 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="wartosc" id="FB787515-0521-61C9-822C-8A168042EACB">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:12:57 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BD4 PRODUKTv1 nr produktu" id="1403A337-E451-F8BB-CE79-8CE7EBA968DB">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:14:39 UTC</createdTime>
+<generatorID>FCB48347-D38D-991A-4F1F-5CE1CCA2FF75</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<referedAttribute>8281231C-4C2E-E191-2DB4-6C82FF6A3AD7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BD4 KLIENT nr klienta" id="54153E19-0188-7339-BB45-52C01E571848">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:15:54 UTC</createdTime>
+<generatorID>F8B9E188-79BB-5CF2-3664-8CCD76CAF0CA</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<referedAttribute>F67D28DC-83A9-3494-C29C-E4451844BF55</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr klienta" id="6009824B-52E4-02DD-9F40-1ED4FC2AAC7E">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:27:13 UTC</createdTime>
+<generatorID>87AB3DF4-2362-DECD-4CCF-BB4A092EED02</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="48132457-02BA-0F97-2C94-FA3AD525E435" name="BD4_RACHUNEK_PK">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:12:15 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>03F2BBF7-357A-6C4D-0C1C-96AA793C040A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

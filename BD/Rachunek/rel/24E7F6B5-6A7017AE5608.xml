@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="rachunek" id="24E7F6B5-7C29-B4A9-AC17-6A7017AE5608" mainViewID="2B285BD2-98F9-F543-74EC-7C86504B5BE0">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 13:14:15 UTC</createdTime>
+<ownerDesignName>Rachunek</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>79C73AAF-E1A7-E669-7DF0-025EE81A2AFC</selectedRDBMSSite>
+</relationalModel>

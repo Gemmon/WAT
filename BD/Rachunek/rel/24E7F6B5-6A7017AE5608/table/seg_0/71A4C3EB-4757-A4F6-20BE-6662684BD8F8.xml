@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="71A4C3EB-4757-A4F6-20BE-6662684BD8F8" name="BD4_PRODUKTv1">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ranking: 
+1 - 10
+1 - bardzo złe
+10 -bardzo dobre]]></commentInRDBMS>
+<generatorID>68B78542-271C-F78B-BA8E-7D0745ADDB8C</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nr_produktu" id="4358781D-8435-84E3-4F72-4851B8F2B5D6">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>8281231C-4C2E-E191-2DB4-6C82FF6A3AD7</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa_produktu" id="D6A10CA2-CE13-33BE-1738-9F6D2DDFF90A">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>84F4BB59-4A4E-EC7D-5A11-058D77439E51</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cena_produktu" id="607D583E-3437-982C-835A-F652D810A172">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>FC642145-4C75-FF9A-F2BB-913427279D75</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rok_produkcji" id="BA1D8A45-4117-A2D2-882A-0E936BC075F9">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>C08B987C-F0CC-C90D-F317-2724A6004D84</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ranking" id="56DBCA9A-8E6F-5F47-3F36-901F78A2F079">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>A24E4496-3C28-83F8-4752-34B7FD1AF506</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9C263DAA-D3FD-E0DB-EA30-E8B59080FC56" name="BD4_PRODUKTv1_PK">
+<createdBy>Gekko</createdBy>
+<createdTime>2024-01-07 20:18:41 UTC</createdTime>
+<generatorID>270718E1-5736-4EC9-58A1-6FB0BD1FC686</generatorID>
+<ownerDesignName>Rachunek</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4358781D-8435-84E3-4F72-4851B8F2B5D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
