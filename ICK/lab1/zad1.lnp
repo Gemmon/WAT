@@ -1,0 +1,3 @@
+"C:\Documents and Settings\Administrator\Pulpit\ICK\lab1\zad1.obj" 
+TO "C:\Documents and Settings\Administrator\Pulpit\ICK\lab1\zad1" 
+PRINT(".\zad1.m51") RAMSIZE(256) 
