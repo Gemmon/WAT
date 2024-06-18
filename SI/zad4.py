@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Generowanie liczb losowych
+# generowanie liczb
 np.random.seed(0)
 num_samples_per_class = 100
 X0 = np.random.multivariate_normal([0, 0], [[1, .75], [.75, 1]], num_samples_per_class)
@@ -10,7 +10,7 @@ X1 = np.random.multivariate_normal([1, 4], [[1, .75], [.75, 1]], num_samples_per
 X = np.vstack([X0, X1])
 y = np.hstack([np.zeros(num_samples_per_class), np.ones(num_samples_per_class)])
 
-# Normalizacja cech
+# normalizacja cech
 X_mean = X.mean(axis=0)
 X_std = X.std(axis=0)
 X = (X - X_mean) / X_std
@@ -43,11 +43,11 @@ class LogisticRegression:
     def predict(self, X, threshold=0.5):
         return self.predict_prob(X) >= threshold
 
-# Inicjalizacja i trening modelu
+# inicjalizacja modelu
 model = LogisticRegression(learning_rate=0.1, num_iter=3000)
 model.fit(X, y)
 
-# Predykcje dla kilku zadanych wartości
+# predykcje
 sample_points = np.array([[0, 0], [1, 1], [-1, -1]])
 normalized_sample_points = (sample_points - X_mean) / X_std
 predictions = model.predict(normalized_sample_points)
@@ -55,20 +55,18 @@ predictions = model.predict(normalized_sample_points)
 print("Sample points:", sample_points)
 print("Predictions:", predictions)
 
-# Rysowanie wykresu
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 7))
 
 # Dane treningowe
-plt.scatter(X[y == 0][:, 0], X[y == 0][:, 1], color='blue', label='Class 0')
-plt.scatter(X[y == 1][:, 0], X[y == 1][:, 1], color='red', label='Class 1')
+plt.scatter(X[y == 0][:, 0], X[y == 0][:, 1], color='blue',edgecolors='black', label='Cecha 1')
+plt.scatter(X[y == 1][:, 0], X[y == 1][:, 1], color='red',edgecolors='black', label='Cecha 2')
 
-# Krzywa regresji
+# krzywa regresji
 x_values = np.linspace(X[:, 0].min(), X[:, 0].max(), 100)
 y_values = -(model.theta[0] + model.theta[1] * x_values) / model.theta[2]
-plt.plot(x_values, y_values, label='Decision Boundary', color='green')
+plt.plot(x_values, y_values, label='Granica decyzyjna', color='red')
 
-# Predykcje
-plt.scatter(normalized_sample_points[:, 0], normalized_sample_points[:, 1], color='yellow', edgecolors='black', label='Predictions')
+plt.scatter(normalized_sample_points[:, 0], normalized_sample_points[:, 1], color='green', edgecolors='black', label='Predykcje')
 
 plt.xlabel('Cecha 1')
 plt.ylabel('Cecha 2')
